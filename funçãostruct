@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Carro {
+    char nome[20];
+    int anoFabricacao;
+    char corCarro[20];
+};
+
+void modeloCarro(struct Carro car) {
+    printf("Nome: %s\n", car.nome);
+    printf("Ano: %d\n", car.anoFabricacao);
+    printf("Cor: %s\n", car.corCarro);
+}
+
+int main() {
+    struct Carro Carros[3]; // Array de carros
+
+    printf("Digite os detalhes do carro 1:\n");
+    printf("Digite o nome do carro: ");
+    scanf("%19s", Carros[0].nome); // Lê o nome do carro com no máximo 19 caracteres
+
+    printf("Digite o ano de fabricacao do carro: ");
+    scanf("%d", &Carros[0].anoFabricacao); // Lê o ano de fabricação
+
+    printf("Digite a cor do carro: ");
+    scanf("%19s", Carros[0].corCarro); // Lê a cor do carro com no máximo 19 caracteres
+
+    // Limpa o buffer de entrada após usar scanf para evitar problemas com gets
+    while (getchar() != '\n');
+
+    printf("\nDetalhes do carro 1:\n");
+    modeloCarro(Carros[0]); // Exibe os detalhes do carro
+
+    return 0;
+}
