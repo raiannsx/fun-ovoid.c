@@ -19,7 +19,7 @@ void imprimirPessoa(Pessoa p){
     printf("\tData de nas.: %d/%d/%d\n", p.dataNas.dia, p.dataNas.mes, p.dataNas.ano);
 }
 
-// função que lê os dados de uma pessoa e retorna para quem chamou
+// funÃ§Ã£o que lÃª os dados de uma pessoa e retorna para quem chamou
 Pessoa lerPessoa(){
     Pessoa p;
     printf("Digite seu nome: ");
@@ -38,7 +38,7 @@ int main() {
 
     Pessoa pessoa;
 
-    pessoa = lerPessoa(); // a variável pessoa recebe uma pessoa da função lerPessoa.
+    pessoa = lerPessoa(); // a variÃ¡vel pessoa recebe uma pessoa da funÃ§Ã£o lerPessoa.
     imprimirPessoa(pessoa);
 
     return 0;
